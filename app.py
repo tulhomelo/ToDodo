@@ -7,21 +7,21 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 def get_db_connection():
     conn = psycopg2.connect(
         host="localhost",
-        database="blog",
+        database="tododo",
         user=os.getenv('DB_USERNAME'),
         password=os.environ['DB_PASSWORD']
     )
     return conn
 
-# query todos os posts no banco
-def get_post(post_id):
+# query todos os todo no banco
+def get_todo(todo_id):
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM posts WHERE id = %s', (post_id,))
-    post = cur.fetchone()
+    cur.execute('SELECT * FROM todo WHERE id = %s', (todo_id,))
+    todo = cur.fetchone()
     cur.close()
     conn.close()
-    return post
+    return todo
 
 # cria o serviço
 app = Flask(__name__)
@@ -32,18 +32,18 @@ app.config['SECRET_KEY'] = os.getenv('SESSION_SECRET_KEY_DEV')
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM posts')
-    posts = cur.fetchall()
+    cur.execute('SELECT * FROM todo')
+    todo = cur.fetchall()
     cur.close()
     conn.close()
-    return render_template('index.html', posts=posts)
+    return render_template('index.html', todo=todo)
 
-@app.route('/<int:post_id>')
-def post(post_id):
-    post = get_post(post_id)
-    if post is None:
+@app.route('/<int:todo_id>')
+def todo(todo_id):
+    todo = get_todo(todo_id)
+    if todo is None:
         return render_template('404.html')
-    return render_template('post.html', post=post)
+    return render_template('todo.html', todo=todo)
 
 @app.route('/about')
 def about():
@@ -52,16 +52,16 @@ def about():
 @app.route('/create', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
-        title = request.form['title']
-        content = request.form['content']
+        title = request.form['titulo']
+        descricao = request.form['descricao']
 
         if not title:
-            flash('Title is required!')
+            flash('Título é obrigatório!')
         else:
             conn = get_db_connection()
             cur = conn.cursor()
-            cur.execute('INSERT INTO posts (title, content) VALUES (%s, %s)',
-                         (title, content))
+            cur.execute('INSERT INTO todo (titulo, descricao) VALUES (%s, %s)',
+                         (titulo, descricao))
             conn.commit()
             cur.close()
             conn.close()
@@ -71,43 +71,43 @@ def create():
 
 @app.route('/<int:id>/edit', methods=('GET', 'POST'))
 def edit(id):
-    post = get_post(id)
+    todo = get_todo(id)
 
-    if post is None:
+    if todo is None:
         return render_template('404.html')
 
     if request.method == 'POST':
-        title = request.form['title']
-        content = request.form['content']
+        titulo = request.form['titulo']
+        descricao = request.form['descricao']
 
-        if not title:
-            flash('Title is required!')
+        if not titulo:
+            flash('Título é obrigatório!')
         else:
             conn = get_db_connection()
             cur = conn.cursor()
-            cur.execute('UPDATE posts SET title = %s, content = %s'
+            cur.execute('UPDATE todo SET titulo = %s, descricao = %s'
                          ' WHERE id = %s',
-                         (title, content, id))
+                         (titulo, descricao, id))
             conn.commit()
             cur.close()
             conn.close()
             return redirect(url_for('index'))
 
-    return render_template('edit.html', post=post)
+    return render_template('edit.html', todo=todo)
 
 @app.route('/<int:id>/delete', methods=('POST',))
 def delete(id):
-    post = get_post(id)
-    if post is None:
+    todo = get_todo(id)
+    if todo is None:
         return render_template('404.html')
     
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('DELETE FROM posts WHERE id = %s', (id,))
+    cur.execute('DELETE FROM todo WHERE id = %s', (id,))
     conn.commit()
     cur.close()
     conn.close()
-    flash('"{}" was successfully deleted!'.format(post[2]))
+    flash('"{}" foi removido!'.format(todo[2]))
     return redirect(url_for('index'))
 
 # inicia servico

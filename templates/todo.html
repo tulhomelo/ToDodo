@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block titulo %} {{ todo[2] }} {% endblock %}</h2>
+    <span class="badge badge-primary">{{ todo[1] }}</span>
+    <p>{{ todo[3] }}</p>
+{% endblock %}

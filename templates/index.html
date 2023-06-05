@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-    {% for post in posts %}
-    	<a href="{{ url_for('post', post_id=post[0]) }}"><h2>{{ post[2] }}</h2></a>
-	    <span class="badge badge-primary">{{ post[1] }}</span>
-	    <a href="{{ url_for('edit', id=post[0]) }}">
-            <span class="badge badge-warning">Edit</span>
+    <h1>{% block title %} Bem-vindo ao ToDoDo {% endblock %}</h1>
+    {% for todo in todos %}
+    	<a href="{{ url_for('todo', todo_id=todo[0]) }}"><h2>{{ todo[2] }}</h2></a>
+	    <span class="badge badge-primary">{{ todo[1] }}</span>
+	    <a href="{{ url_for('edit', id=todo[0]) }}">
+            <span class="badge badge-warning">Editar</span>
         </a>
 	    <hr>
     {% endfor %}	

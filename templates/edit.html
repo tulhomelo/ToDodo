@@ -1,32 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Edit "{{ post[2] }}" {% endblock %}</h1>
+<h1>{% block title %} Edit "{{ todo[2] }}" {% endblock %}</h1>
 
 <form method="post">
     <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" name="title" placeholder="Post title"
+        <label for="titulo">Título</label>
+        <input type="text" name="titulo" placeholder="Título do ToDo"
                class="form-control"
-               value="{{ request.form['title'] or post[2] }}">
+               value="{{ request.form['titulo'] or todo[2] }}">
         </input>
     </div>
 
     <div class="form-group">
-        <label for="content">Content</label>
-        <textarea name="content" placeholder="Post content"
-                  class="form-control">{{ request.form['content'] or post[3] }}</textarea>
+        <label for="descricao</label>
+        <textarea name="descricao" placeholder="Descrição do ToDo"
+                  class="form-control">{{ request.form['descricao'] or todo[3] }}</textarea>
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Atualizar</button>
     </div>
 </form>
 <hr>
 
-<form action="{{ url_for('delete', id=post[0]) }}" method="POST">
-    <input type="submit" value="Delete Post"
+<form action="{{ url_for('delete', id=todo[0]) }}" method="POST">
+    <input type="submit" value="Remover ToDo"
             class="btn btn-danger btn-sm"
-            onclick="return confirm('Are you sure you want to delete this post?')">
+            onclick="return confirm('Tem certeza que deseja remover esse ToDo?')">
 </form>
 
 {% endblock %}
