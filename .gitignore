@@ -2,7 +2,7 @@
 *.db
 
 # ENV
-.env*
+# .env*
 env*
 
 # others
