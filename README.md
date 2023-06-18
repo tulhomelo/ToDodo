@@ -106,3 +106,14 @@ Realize todas as operações CRUD e certifique o resultado no banco, via pgAdmin
 Veja como nossa aplicação está desacoplada em três instâncias: banco, gerenciador de banco, e aplicação web. Isso é uma aplicação distribuída. Quer brincar mais um pouco? Crie um conteiner da aplicação web na mesma rede dos outros dois conteineres. Assim você terá sua aplicação distribuída em três conteineres. 
 
 - Pratique e estude bastante. :rocket: rocket:
+
+- ## Colaboradores
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/tulhomelo"><img src="https://avatars.githubusercontent.com/u/5217328?v=4" width="100px;" alt=""/><br /><sub><b>Tulho Melo</b></sub></td>
+    <td align="center"><a href="https://github.com/thalesgfelix"><img src="https://github.com/account" width="100px;" alt=""/><br /><sub><b>Thales Gabriel</b></sub></td>
+    <td align="center"><a href="https://github.com/victoriaemilly"><img src="https://avatars.githubusercontent.com/u/89431047?v=4" width="100px;" alt=""/><br /><sub><b>Victoria Emilly</b></sub></td>
+    <td align="center"><a href="https://github.com/rafaelalopesz"><img src="https://avatars.githubusercontent.com/u/89741721?v=4" width="100px;" alt=""/><br /><sub><b>Rafaela Lopes</b></sub></td>
