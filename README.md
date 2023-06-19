@@ -1,9 +1,10 @@
 # ToDoDo
 
+<img src="https://s2.glbimg.com/dg0lRYZT0vvkQ6eX5Msty0OOJdw=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_fb623579cd474803aedbbbbae014af68/internal_photos/bs/2022/Z/h/wMnZgUTh6xgXyhP5eUzw/2022-08-23-o-passaro-dodo-de-alice-no-pais-das-maravilhas-existiu-na-vida-real-vidadebicho.jpeg" width="450px;">
 
-## Organização do projeto
+## Objetivo do Sistema
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvidadebicho.globo.com%2Fcolunistas%2Fbiologia-aplicada%2Fcoluna%2F2022%2F08%2Fo-passaro-dodo-de-alice-no-pais-das-maravilhas-existiu-na-vida-real.ghtml&psig=AOvVaw0_q5-BaUql_MLmiNZrpyVh&ust=1687300503515000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKCknKuy0P8CFQAAAAAdAAAAABAR">
+Nosso sistema tem como objetivo adicionar uma lista de tarefas diárias a serem cumpridas pelo usuário, tendo ele total controle de adicionar e remover estas tarefas e o ajudando na gestão do seu trabalho, ou exercício a ser feito, etc.
 
 
 - ## Colaboradores
