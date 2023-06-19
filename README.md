@@ -4,7 +4,7 @@
 
 - ## Objetivo do Sistema
 
-  - Nosso sistema tem como objetivo ser uma plataforma de gestão tarefas, tendo o usuário total controle de adição, remoção e edição delas, para ajudar na gestão do seu trabalho, atividades a serem realizadas, etc.
+  - Nosso sistema tem como objetivo ser uma plataforma de gestão tarefas, oferecendo ao usuário total controle de criação, remoção e edição de suas tarefas, para auxiliar na gestão do seu trabalho, atividades a serem realizadas, etc.
 
 
 - ## Colaboradores
