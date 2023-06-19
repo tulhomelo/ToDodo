@@ -4,7 +4,7 @@
 
 ## Objetivo do Sistema
 
-Nosso sistema tem como objetivo adicionar uma lista de tarefas diárias a serem cumpridas pelo usuário, tendo ele total controle de adicionar e remover elas para ajudar na gestão do seu trabalho, ou exercício a ser feito, etc.
+Nosso sistema tem como objetivo adicionar uma lista de tarefas diárias a serem cumpridas pelo usuário, tendo ele total controle de adicionar e remover elas para ajudar na gestão do seu trabalho, ou atividade a ser realizada, etc.
 
 
 - ## Colaboradores
