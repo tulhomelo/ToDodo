@@ -52,10 +52,10 @@ def about():
 @app.route('/create', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
-        title = request.form['titulo']
+        titulo = request.form['titulo']
         descricao = request.form['descricao']
 
-        if not title:
+        if not titulo:
             flash('Título é obrigatório!')
         else:
             conn = get_db_connection()
@@ -79,15 +79,17 @@ def edit(id):
     if request.method == 'POST':
         titulo = request.form['titulo']
         descricao = request.form['descricao']
+        limite = request.form['limite']
+        concluido = request.form['concluido']
 
         if not titulo:
             flash('Título é obrigatório!')
         else:
             conn = get_db_connection()
             cur = conn.cursor()
-            cur.execute('UPDATE todo SET titulo = %s, descricao = %s'
+            cur.execute('UPDATE todo SET titulo = %s, descricao = %s, limite = %s, concluido = %s'
                          ' WHERE id = %s',
-                         (titulo, descricao, id))
+                         (titulo, descricao, limite, concluido, id))
             conn.commit()
             cur.close()
             conn.close()
