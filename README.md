@@ -1,14 +1,9 @@
 # ToDoDo
 
-Esta página apresenta uma simples aplicação Flask, que deve ser conteinerizada, porém, diferentemente, da primeira versão, esta possui o banco de dados (relacional) desacoplado do serviço web. A distribuição da aplicação é apresentada na imagem abaixo.
-
-![Blog-versão 2](./static/arquitetura_blogv2.png)
 
 ## Organização do projeto
 
-
-
-
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvidadebicho.globo.com%2Fcolunistas%2Fbiologia-aplicada%2Fcoluna%2F2022%2F08%2Fo-passaro-dodo-de-alice-no-pais-das-maravilhas-existiu-na-vida-real.ghtml&psig=AOvVaw0_q5-BaUql_MLmiNZrpyVh&ust=1687300503515000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKCknKuy0P8CFQAAAAAdAAAAABAR">
 
 
 - ## Colaboradores
