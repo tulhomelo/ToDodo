@@ -105,4 +105,4 @@ Realize todas as operações CRUD e certifique o resultado no banco, via pgAdmin
 
 Veja como nossa aplicação está desacoplada em três instâncias: banco, gerenciador de banco, e aplicação web. Isso é uma aplicação distribuída. Quer brincar mais um pouco? Crie um conteiner da aplicação web na mesma rede dos outros dois conteineres. Assim você terá sua aplicação distribuída em três conteineres. 
 
-- Pratique e estude bastante! :rocket: rocket:
+- Pratique e estude bastante. :rocket: rocket:
