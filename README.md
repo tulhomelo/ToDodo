@@ -2,9 +2,9 @@
 
 <img src="https://s2.glbimg.com/dg0lRYZT0vvkQ6eX5Msty0OOJdw=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_fb623579cd474803aedbbbbae014af68/internal_photos/bs/2022/Z/h/wMnZgUTh6xgXyhP5eUzw/2022-08-23-o-passaro-dodo-de-alice-no-pais-das-maravilhas-existiu-na-vida-real-vidadebicho.jpeg" width="450px;">
 
-## Objetivo do Sistema
+- ## Objetivo do Sistema
 
-- Nosso sistema tem como objetivo adicionar uma lista de tarefas diárias a serem cumpridas pelo usuário, tendo ele total controle de adicionar e remover elas para ajudar na gestão do seu trabalho, ou atividade a ser realizada, etc.
+  - Nosso sistema tem como objetivo adicionar uma lista de tarefas diárias a serem cumpridas pelo usuário, tendo ele total controle de adicionar e remover elas para ajudar na gestão do seu trabalho, ou atividade a ser realizada, etc.
 
 
 - ## Colaboradores
